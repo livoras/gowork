@@ -20,12 +20,12 @@ func (rr *rot13Reader) Read(b []byte) (int, error) {
 		} else {
 			if pos > 97 {
 				pos = pos + 13
-				if (pos > 122) {
+				if pos > 122 {
 					pos = pos - 26
 				}
 			} else {
 				pos = pos + 13
-				if (pos > 90) {
+				if pos > 90 {
 					pos = pos - 26
 				}
 			}
