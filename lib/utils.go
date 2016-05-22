@@ -1,5 +1,7 @@
-import 'fmt'
+package lib
+
+import "fmt"
 
 func Run(name string) {
-  fmt.Println("FUCK ", name)
+	fmt.Println("FUCK ", name)
 }
