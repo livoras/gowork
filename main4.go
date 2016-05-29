@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"runtime"
+)
 
 func main() {
 	c := make(chan int)
@@ -10,6 +13,7 @@ func main() {
 	go sum(1, 34, c)
 	x, y := <-c, <-c
 	fmt.Println(x, y, <-c)
+	fmt.Println(runtime.NumCPU(), "fuck")
 }
 
 func sum(x, y int, c chan int) {
