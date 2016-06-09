@@ -8,7 +8,7 @@ import (
 
 func main() {
 	fmt.Print("fuc")
-	c := make(chan int, 1)
+	c := make(chan int)
 	for i := 0; i < 10; i++ {
 		go process(i, c)
 	}
@@ -16,8 +16,8 @@ func main() {
 		select {
 		case c <- rand.Int():
 			fmt.Println("Now.,")
-		case <-c:
-			fmt.Println("Now.")
+		case i := <-c:
+			fmt.Println("Now.", i)
 		default:
 			fmt.Println("default", len(c))
 		}
