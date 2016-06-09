@@ -2,10 +2,12 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"reflect"
 )
 
 func main() {
+	fmt.Print(os.Getenv("NODE_DEV"))
 	a := []int{}
 	var b [10]int
 	fmt.Println(len(a), cap(a), reflect.TypeOf(a), reflect.TypeOf(b))
