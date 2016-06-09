@@ -56,3 +56,12 @@ Function is first-class in golang. You use them as value, return value, paramete
 
 ## channels
 Channels are communication pipes between goroutines which is used to pass data.
+
+## select
+`select` blocks util one of its case can run, then execute that case. It choose randomly when multiple case are ready.
+
+If a channel has no buffer (when trying to read) or is full (when trying to write), then it's not ready.
+
+In case that using `<- c` to read data, if there is no data received in channel, then it's not ready.
+
+In case than using `c <- data` to write data into channel, this channel has to have been specified a buffer size when it's declared and is not full to be ready.
