@@ -53,3 +53,6 @@ When `range` a string, you actually ranging a `[]rune` by default.
 
 ## function is first-class in golang
 Function is first-class in golang. You use them as value, return value, parameter as normal variables.
+
+## channels
+Channels are communication pipes between goroutines which is used to pass data.
