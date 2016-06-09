@@ -22,4 +22,13 @@ func main() {
 	a = append(a, 1)
 	a = append(a, 1)
 	fmt.Println(cap(a))
+
+	c := make(chan interface{})
+	go func() {
+		c <- 1
+	}()
+	go func() {
+		c <- "string"
+	}()
+	fmt.Print(<-c, <-c)
 }
