@@ -67,3 +67,13 @@ In case that using `<- c` to read data, if there is no data received in channel,
 In case than using `c <- data` to write data into channel, this channel has to have been specified a buffer size when it's declared and is not full to be ready.
 
 ## os.Getenv to get environment variable
+
+
+## `iota` auto increment variable
+```
+const (
+  One = iota
+  Two
+  Three
+)
+```
