@@ -77,3 +77,10 @@ const (
   Three
 )
 ```
+
+## When declare a slice, you can use indexes to place.
+
+var str = []string{
+  0: "shi",
+  3: "fuck"
+}
