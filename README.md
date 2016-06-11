@@ -84,3 +84,7 @@ var str = []string{
   0: "shi",
   3: "fuck"
 }
+
+## Using `sync/atomic` to manage shared state atomically by address.
+
+https://gobyexample.com/atomic-counters
