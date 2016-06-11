@@ -7,7 +7,12 @@ import (
 )
 
 func main() {
-	fmt.Print(os.Getenv("NODE_DEV"))
+	var str = []string{
+		0: "shi",
+		1: "shi",
+		3: "shi",
+	}
+	fmt.Println(os.Getenv("NODE_DEV"), str[2])
 	a := []int{}
 	var b [10]int
 	fmt.Println(len(a), cap(a), reflect.TypeOf(a), reflect.TypeOf(b))
